@@ -20,7 +20,7 @@ class App{
     private $storage;
 
     private function __construct(){
-        $this->dir = '';
+        $this->dir = 'conf';
         $this->syntax = new Syntax\FileDotPropSyntax();
         $this->retriever = new Retriever\JsonRetriever();
         $this->storage = new Storage\ArrayStorage();
@@ -37,7 +37,7 @@ class App{
         $dataCollection = $this->retriever->retrieveData($retrievable, $this->dir);
 
         if(isset($dataCollection[$prop])){
-            $data = $dataCollection[$prop]
+            $data = $dataCollection[$prop];
 
             $this->storage->write($configIndex, $data);
             return $data;

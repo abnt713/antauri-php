@@ -2,6 +2,6 @@
 
 namespace Antauri\Storage;
 
-class AntauriUndefined{
+class UndefinedValue{
 
 }

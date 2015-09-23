@@ -5,7 +5,7 @@ namespace Antauri\Retriever;
 class JsonRetriever implements IRetriever{
 
     public function retrieveData(Retrievable $retrievable, $antauriDir){
-        $jsonFilePath = $retrievable->path . '/' . $retrievable->file . '.json';
+        $jsonFilePath = $antauriDir . '/' . $retrievable->path . '/' . $retrievable->file . '.json';
         if(is_file($jsonFilePath) && is_readable($jsonFilePath)){
             $validJsonFile = true;
         }else{

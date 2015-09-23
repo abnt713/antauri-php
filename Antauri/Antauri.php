@@ -10,19 +10,19 @@ class Antauri{
     private static $storage;
 
     public static function dir($dir){
-        App::instance()->dir($dir);
+        App::instance()->setDir($dir);
     }
 
     public static function syntax(Syntax\ISyntax $syntax){
-        App::instance()->syntax($syntax);
+        App::instance()->setSyntax($syntax);
     }
 
     public static function retriever(Retriever\IRetriever $retriever){
-        App::instance()->retriever($retriever);
+        App::instance()->setRetriever($retriever);
     }
 
     public static function storage(Storage\IStorage $storage){
-        App::instance()->storage($storage);
+        App::instance()->setStorage($storage);
     }
 
     public static function get($configIndex, $defaultOnNotFound = null){
