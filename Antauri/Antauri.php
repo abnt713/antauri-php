@@ -9,31 +9,28 @@ class Antauri{
     private static $retriever;
     private static $storage;
 
-    public static function init($dir = ''){
-        self::$dir = $dir;
-        self::$syntax = new Syntax\FileDotPropSyntax();
-        self::$retriever = new Retriever\JsonRetriever();
-        self::$storage = new Storage\ArrayStorage();
-    }
-
     public static function dir($dir){
-        self::$dir = $dir;
+        App::instance()->dir($dir);
     }
 
     public static function syntax(Syntax\ISyntax $syntax){
-        self::$syntax = $syntax;
+        App::instance()->syntax($syntax);
     }
 
     public static function retriever(Retriever\IRetriever $retriever){
-        self::$retriever = $retriever;
+        App::instance()->retriever($retriever);
     }
 
     public static function storage(Storage\IStorage $storage){
-        self::$storage = $storage;
+        App::instance()->storage($storage);
     }
 
-    public static function get($configIndex, $defaultOnNull = null){
-        
+    public static function get($configIndex, $defaultOnNotFound = null){
+        return App::instance()->get($configIndex, $defaultOnNotFound);
+    }
+
+    public static function set($configIndex, $value){
+        App::instance()->set($configIndex, $value);
     }
 
 }
