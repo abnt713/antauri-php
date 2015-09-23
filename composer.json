@@ -8,7 +8,7 @@
             "email": "alisonbnt@gmail.com"
         }
     ],
-    "require": {
+    "autoload": {
         "psr-4": {
             "Antauri\\": "Antauri"
         }
