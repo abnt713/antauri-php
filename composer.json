@@ -1,0 +1,16 @@
+{
+    "name": "alisonbnt/antauri-php",
+    "description": "Simple configuration library for any structure",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alison Bento",
+            "email": "alisonbnt@gmail.com"
+        }
+    ],
+    "require": {
+        "psr-4": {
+            "Antauri\\": "Antauri"
+        }
+    }
+}
