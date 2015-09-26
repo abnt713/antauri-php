@@ -21,8 +21,8 @@ class App{
 
     private function __construct(){
         $this->dir = 'conf';
-        $this->syntax = new Syntax\FileDotPropSyntax();
-        $this->retriever = new Retriever\JsonRetriever();
+        $this->syntax = new Syntax\JsonDotSyntax();
+        $this->retriever = new Retriever\JsonDotRetriever();
         $this->storage = new Storage\ArrayStorage();
     }
 
