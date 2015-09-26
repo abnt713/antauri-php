@@ -16,10 +16,6 @@ class JsonDotSyntax implements ISyntax{
 
         $retrievable->prop = implode('.', $retrievable->prop);
 
-        echo '<pre>';
-        var_dump($retrievable);
-        echo '</pre>';
-
         return $retrievable;
     }
 
