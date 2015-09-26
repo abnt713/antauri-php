@@ -32,13 +32,10 @@ class App{
             return $value;
         }
 
-        $retrievable = $this->syntax->parseToRetrievable($configIndex);
-        $prop = $retrievable->prop;
-        $dataCollection = $this->retriever->retrieveData($retrievable, $this->dir);
+        $retrievable = $this->syntax->parseToRetrievable($configIndex, $this->dir);
+        $data = $this->retriever->retrieveData($retrievable);
 
-        if(isset($dataCollection[$prop])){
-            $data = $dataCollection[$prop]
-
+        if(!$this->isUndefinedValue($data)){
             $this->storage->write($configIndex, $data);
             return $data;
         }else{
