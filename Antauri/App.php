@@ -20,7 +20,7 @@ class App{
     private $storage;
 
     private function __construct(){
-        $this->dir = '';
+        $this->dir = 'conf';
         $this->syntax = new Syntax\FileDotPropSyntax();
         $this->retriever = new Retriever\JsonRetriever();
         $this->storage = new Storage\ArrayStorage();

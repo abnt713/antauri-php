@@ -1,6 +1,6 @@
 <?php
 
-namespace Antauri\Data;
+namespace Antauri\Storage;
 
 interface IStorage{
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Antauri\Interpreter;
+namespace Antauri\Syntax;
 
 interface ISyntax{
 
