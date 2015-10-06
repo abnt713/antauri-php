@@ -1,10 +1,10 @@
 {
-    "name": "alisonbnt/antauri-php",
+    "name": "m4nolo/antauri-php",
     "description": "Simple configuration library for any structure",
     "license": "MIT",
     "authors": [
         {
-            "name": "Alison Bento",
+            "name": "Alison Bento 'M4nolo'",
             "email": "alisonbnt@gmail.com"
         }
     ],
