@@ -33,7 +33,11 @@ class App{
         }
 
         $retrievable = $this->syntax->parseToRetrievable($configIndex, $this->dir);
-        $data = $this->retriever->retrieveData($retrievable);
+        try{
+            $data = $this->retriever->retrieveData($retrievable);
+        }catch(Exception $e){
+            throw $e;
+        }
 
         if(!$this->isUndefinedValue($data)){
             $this->storage->write($configIndex, $data);

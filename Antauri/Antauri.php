@@ -26,7 +26,11 @@ class Antauri{
     }
 
     public static function get($configIndex, $defaultOnNotFound = null){
-        return App::instance()->get($configIndex, $defaultOnNotFound);
+        try{
+            return App::instance()->get($configIndex, $defaultOnNotFound);
+        }catch(Exception $e){
+            throw $e;
+        }
     }
 
     public static function set($configIndex, $value){

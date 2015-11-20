@@ -13,7 +13,7 @@ class JsonDotRetriever implements IRetriever{
         }
 
         if(!$validJsonFile){
-            throw new \Antauri\Exception\UnretrievableFileException();
+            throw new \Antauri\Exception\UnretrievableFileException($retrievable->file);
             return null;
         }
 
