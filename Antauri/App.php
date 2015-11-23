@@ -35,7 +35,7 @@ class App{
         $retrievable = $this->syntax->parseToRetrievable($configIndex, $this->dir);
         try{
             $data = $this->retriever->retrieveData($retrievable);
-        }catch(Exception $e){
+        }catch(\Exception $e){
             throw $e;
         }
 
